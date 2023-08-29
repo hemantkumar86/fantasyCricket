@@ -1262,7 +1262,7 @@ var hit = () => {
     return false;
   }
 
-  // disableButton();
+  disableButton();
 };
 var disableButton = () => {
   const button = document.getElementById("hitted");
@@ -1436,7 +1436,7 @@ var hit1 = () => {
     return false;
   }
 
-  // disableButton1();
+   disableButton1();
 };
 var disableButton1 = () => {
   const button = document.getElementById("hitted1");
