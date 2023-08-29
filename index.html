@@ -39,7 +39,7 @@
             <div id="card" class="d-flex flex-row row justify-content-center">
                 <div class="col-lg-3" id="card"></div>
             </div>
-           
+
 
             <div class="d-flex  justify-content-center">
                 <div id="chooseC" class="my-4 mx-3" style="display: none;">Choose Captain:-<div class="col-auto ">
@@ -81,202 +81,249 @@
                 <div class="col-lg-3" id="card1"></div>
 
             </div>
-              
-                <div class="d-flex  justify-content-center">
-                    <div id="chooseC2" class="my-4  mx-4" style="display: none;">Choose Captain:-<div class="col-auto ">
-                            <label class="visually-hidden" for="captain2">Preference</label>
-                            <select class="form-select" id="captain2" onchange="chooseCaptain2(this.value)">
 
-                            </select>
-                        </div>
-                    </div>
-                    <div id="chooseVC2" class="my-4  mx-4" style="display: none;">Choose Vice Captain:-<div
-                            class="col-auto ">
-                            <label class="visually-hidden" for="vCaptain2">Preference</label>
-                            <select class="form-select" id="vCaptain2" onchange="chooseVCaptain2(this.value)">
+            <div class="d-flex  justify-content-center">
+                <div id="chooseC2" class="my-4  mx-4" style="display: none;">Choose Captain:-<div class="col-auto ">
+                        <label class="visually-hidden" for="captain2">Preference</label>
+                        <select class="form-select" id="captain2" onchange="chooseCaptain2(this.value)">
 
-                            </select>
-                        </div>
+                        </select>
                     </div>
                 </div>
+                <div id="chooseVC2" class="my-4  mx-4" style="display: none;">Choose Vice Captain:-<div
+                        class="col-auto ">
+                        <label class="visually-hidden" for="vCaptain2">Preference</label>
+                        <select class="form-select" id="vCaptain2" onchange="chooseVCaptain2(this.value)">
 
-                <div class="d-grid gap-2 col-6 mx-auto my-4">
-                    <button class="btn btn-primary" id="teamPre" style="display: none;" onclick="teamPreview()"
-                        type="button">Team Preview</button>
+                        </select>
+                    </div>
                 </div>
             </div>
 
-        </div>
-
-        <div id="teamSummary" style="display: none;">
-            <h2 class="text-center">Team Summary</h2>
-            <div id="teams" class="d-flex flex-row justify-content-evenly">
-                <div>
-                    <p id="gamingTeam1"></p>
-                    <p>
-                    <ol class="list-group list-group-numbered" id="playingTeam1">
-
-                    </ol>
-                    </p>
-                </div>
-                <div>
-                    <p id="gamingTeam2"></p>
-                    <p>
-                    <ol class="list-group list-group-numbered" id="playingTeam2">
-
-                    </ol>
-                    </p>
-                </div>
-            </div>
             <div class="d-grid gap-2 col-6 mx-auto my-4">
-                <button class="btn btn-primary" onclick="play()" type="button">Let's Play</button>
-            </div>
-        </div>
-        <div id="displayTeam" style="display: none;">
-            <div class="d-flex justify-content-center">
-                <button class="btn btn-primary  mx-4" id="displayTeams1" onclick="displayTeam1()">Team 1</button>
-                <button class="btn btn-primary  mx-4" id="hideTeams1" onclick="hideTeam1()">Hide Team 1</button>
-                <button class="btn btn-primary  mx-4" id="displayTeams2" onclick="displayTeam2()">Team 2</button>
-                <button class="btn btn-primary  mx-4" id="hideTeams2" onclick="hideTeam2()">Hide Team 2</button>
-            </div>
-            <div class="d-flex justify-content-center">
-                <div id="showTeam1" class="mx-4" style="display: none;">
-
-                    <p>
-                    <ol class="list-group list-group-numbered" id="playsTeam1">
-
-                    </ol>
-                    </p>
-                </div>
-                <div id="showTeam2" class="mx-4" style="display: none;">
-
-                    <p>
-                    <ol class="list-group list-group-numbered" id="playsTeam2">
-
-                    </ol>
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div id="showScore" style="display: none;">
-            <div class="d-flex justify-content-center my-4">
-                <div class="input-group mb-3  w-25 px-3">
-                    <span class="input-group-text " id="showScoreTeam"></span>
-                    <input type="text" class="form-control" id="showScoreCard" readonly="true"
-                        aria-label="Sizing example input" aria-describedby="button-addon1">
-                </div>
+                <button class="btn btn-primary" id="teamPre" style="display: none;" onclick="teamPreview()"
+                    type="button">Team Preview</button>
             </div>
         </div>
 
-        <div id="start" style="display: none;">
-            <div class="d-flex flex-row justify-content-evenly my-4">
-                <div class="input-group mb-3  w-25">
-                    <span class="input-group-text ">Batsman</span>
-                    <input type="text" class="form-control" id="batter" readonly="true"
-                        aria-label="Sizing example input" aria-describedby="button-addon1">
-                </div>
-                <div class="input-group mb-3  w-25">
-                    <span class="input-group-text">Bowler</span>
-                    <input type="text" class="form-control" id="bowler" readonly="true"
-                        aria-label="Sizing example input" aria-describedby="button-addon1">
-                </div>
+    </div>
 
-            </div>
+    <div id="teamSummary" style="display: none;">
+        <h2 class="text-center">Team Summary</h2>
+        <div id="teams" class="d-flex flex-row justify-content-evenly">
+            <div>
+                <p id="gamingTeam1"></p>
+                <p>
+                <ol class="list-group list-group-numbered" id="playingTeam1">
 
-            <div class="d-flex flex-row justify-content-center my-4" id="playTeam1">
-                <div class="input-group mb-3  w-25 px-3">
-                    <span class="input-group-text ">Scorecard</span>
-                    <input type="text" class="form-control" id="scorecard" readonly="true"
-                        aria-label="Sizing example input" aria-describedby="button-addon1">
-                </div>
-                <div class="input-group mb-3  w-25 px-3">
-                    <span class="input-group-text " id="scoreTeam1"></span>
-                    <input type="text" class="form-control" id="pointTeam1" readonly="true"
-                        aria-label="Sizing example input" aria-describedby="button-addon1">
-                </div>
-                <div class="input-group mb-3  w-25 px-3">
-                    <span class="input-group-text " id="scoreTeam2"></span>
-                    <input type="text" class="form-control" id="pointTeam2" readonly="true"
-                        aria-label="Sizing example input" aria-describedby="button-addon1">
-                </div>
-                <div class="input-group mb-3 w-25 px-3 ">
-                    <button class="btn btn-primary" type="button" id="hitted" onclick="hit()">Bowl</button>
-                    <input type="text" class="form-control" placeholder="" readonly="true" id="shots"
-                        aria-label="Example text with button addon" aria-describedby="button-addon1">
-                </div>
+                </ol>
+                </p>
             </div>
-            <div class="d-grid gap-2 col-6 mx-auto">
-                <button class="btn btn-primary my-4" onclick="playSecond()" id="playSecondTeam" style="display: none;"
-                    type="button">Click To Play 2nd Team</button>
-            </div>
+            <div>
+                <p id="gamingTeam2"></p>
+                <p>
+                <ol class="list-group list-group-numbered" id="playingTeam2">
 
-            <div id="table"></div>
-        </div>
-
-        <div id="playTeam2" style="display: none;">
-            <div class="d-flex flex-row justify-content-evenly my-4">
-                <div class="input-group mb-3  w-25">
-                    <span class="input-group-text ">Batsman</span>
-                    <input type="text" class="form-control" id="batter1" readonly="true"
-                        aria-label="Sizing example input" aria-describedby="button-addon1">
-                </div>
-                <div class="input-group mb-3  w-25">
-                    <span class="input-group-text">Bowler</span>
-                    <input type="text" class="form-control" id="bowler1" readonly="true"
-                        aria-label="Sizing example input" aria-describedby="button-addon1">
-                </div>
-            </div>
-            <div class="d-flex flex-row justify-content-center my-4">
-                <div class="input-group mb-3  w-25 px-3">
-                    <span class="input-group-text ">Scorecard</span>
-                    <input type="text" class="form-control" id="scorecardTeam2" readonly="true"
-                        aria-label="Sizing example input" aria-describedby="button-addon1">
-                </div>
-                <div class="input-group mb-3  w-25 px-3">
-                    <span class="input-group-text " id="playingTeamPoint1"></span>
-                    <input type="text" class="form-control" id="playPointTeam1" readonly="true"
-                        aria-label="Sizing example input" aria-describedby="button-addon1">
-                </div>
-                <div class="input-group mb-3  w-25 px-3">
-                    <span class="input-group-text " id="playingTeamPoint2"></span>
-                    <input type="text" class="form-control" id="playPointTeam2" readonly="true"
-                        aria-label="Sizing example input" aria-describedby="button-addon1">
-                </div>
-                <div class="input-group mb-3 w-25 px-3 ">
-                    <button class="btn btn-primary" type="button" id="hitted1" onclick="hit1()">Bowl</button>
-                    <input type="text" class="form-control" placeholder="" readonly="true" id="shots1"
-                        aria-label="Example text with button addon" aria-describedby="button-addon1">
-                </div>
+                </ol>
+                </p>
             </div>
         </div>
-        <!-- Button trigger modal -->
+        <div class="d-grid gap-2 col-6 mx-auto my-4">
+            <button class="btn btn-primary" onclick="play()" type="button">Let's Play</button>
+        </div>
+    </div>
+    <div id="displayTeam" style="display: none;">
+        <div class="d-flex justify-content-center">
+            <button class="btn btn-primary  mx-4" id="displayTeams1" onclick="displayTeam1()">Team 1</button>
+            <button class="btn btn-primary  mx-4" id="hideTeams1" onclick="hideTeam1()">Hide Team 1</button>
+            <button class="btn btn-primary  mx-4" id="displayTeams2" onclick="displayTeam2()">Team 2</button>
+            <button class="btn btn-primary  mx-4" id="hideTeams2" onclick="hideTeam2()">Hide Team 2</button>
+        </div>
+        <div class="d-flex justify-content-center">
+            <div id="showTeam1" class="mx-4" style="display: none;">
+
+                <p>
+                <ol class="list-group list-group-numbered" id="playsTeam1">
+
+                </ol>
+                </p>
+            </div>
+            <div id="showTeam2" class="mx-4" style="display: none;">
+
+                <p>
+                <ol class="list-group list-group-numbered" id="playsTeam2">
+
+                </ol>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div id="showScore" style="display: none;">
+        <div class="d-flex justify-content-center my-4">
+            <div class="input-group mb-3  w-25 px-3">
+                <span class="input-group-text " id="showScoreTeam"></span>
+                <input type="text" class="form-control" id="showScoreCard" readonly="true"
+                    aria-label="Sizing example input" aria-describedby="button-addon1">
+            </div>
+        </div>
+    </div>
+
+    <div id="start" style="display: none;">
+        <div class="d-flex flex-row justify-content-evenly my-4">
+            <div class="input-group mb-3  w-25">
+                <span class="input-group-text ">Batsman</span>
+                <input type="text" class="form-control" id="batter" readonly="true" aria-label="Sizing example input"
+                    aria-describedby="button-addon1">
+            </div>
+            <div class="input-group mb-3  w-25">
+                <span class="input-group-text">Bowler</span>
+                <input type="text" class="form-control" id="bowler" readonly="true" aria-label="Sizing example input"
+                    aria-describedby="button-addon1">
+            </div>
+
+        </div>
+
+        <div class="d-flex flex-row justify-content-center my-4" id="playTeam1">
+            <div class="input-group mb-3  w-25 px-3">
+                <span class="input-group-text ">Scorecard</span>
+                <input type="text" class="form-control" id="scorecard" readonly="true" aria-label="Sizing example input"
+                    aria-describedby="button-addon1">
+            </div>
+            <div class="input-group mb-3  w-25 px-3">
+                <span class="input-group-text " id="scoreTeam1"></span>
+                <input type="text" class="form-control" id="pointTeam1" readonly="true"
+                    aria-label="Sizing example input" aria-describedby="button-addon1">
+            </div>
+            <div class="input-group mb-3  w-25 px-3">
+                <span class="input-group-text " id="scoreTeam2"></span>
+                <input type="text" class="form-control" id="pointTeam2" readonly="true"
+                    aria-label="Sizing example input" aria-describedby="button-addon1">
+            </div>
+            <div class="input-group mb-3 w-25 px-3 ">
+                <button class="btn btn-primary" type="button" id="hitted" onclick="hit()">Bowl</button>
+                <input type="text" class="form-control" placeholder="" readonly="true" id="shots"
+                    aria-label="Example text with button addon" aria-describedby="button-addon1">
+            </div>
+        </div>
         <div class="d-grid gap-2 col-6 mx-auto">
-            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" id="getWinner"
-                style="display: none;" type="button">Get Result</button>
+            <button class="btn btn-primary my-4" onclick="playSecond()" id="playSecondTeam" style="display: none;"
+                type="button">Click To Play 2nd Team</button>
+        </div>
+
+        <div id="table"></div>
+    </div>
+
+    <div id="playTeam2" style="display: none;">
+        <div class="d-flex flex-row justify-content-evenly my-4">
+            <div class="input-group mb-3  w-25">
+                <span class="input-group-text ">Batsman</span>
+                <input type="text" class="form-control" id="batter1" readonly="true" aria-label="Sizing example input"
+                    aria-describedby="button-addon1">
+            </div>
+            <div class="input-group mb-3  w-25">
+                <span class="input-group-text">Bowler</span>
+                <input type="text" class="form-control" id="bowler1" readonly="true" aria-label="Sizing example input"
+                    aria-describedby="button-addon1">
+            </div>
+        </div>
+        <div class="d-flex flex-row justify-content-center my-4">
+            <div class="input-group mb-3  w-25 px-3">
+                <span class="input-group-text ">Scorecard</span>
+                <input type="text" class="form-control" id="scorecardTeam2" readonly="true"
+                    aria-label="Sizing example input" aria-describedby="button-addon1">
+            </div>
+            <div class="input-group mb-3  w-25 px-3">
+                <span class="input-group-text " id="playingTeamPoint1"></span>
+                <input type="text" class="form-control" id="playPointTeam1" readonly="true"
+                    aria-label="Sizing example input" aria-describedby="button-addon1">
+            </div>
+            <div class="input-group mb-3  w-25 px-3">
+                <span class="input-group-text " id="playingTeamPoint2"></span>
+                <input type="text" class="form-control" id="playPointTeam2" readonly="true"
+                    aria-label="Sizing example input" aria-describedby="button-addon1">
+            </div>
+            <div class="input-group mb-3 w-25 px-3 ">
+                <button class="btn btn-primary" type="button" id="hitted1" onclick="hit1()">Bowl</button>
+                <input type="text" class="form-control" placeholder="" readonly="true" id="shots1"
+                    aria-label="Example text with button addon" aria-describedby="button-addon1">
+            </div>
+        </div>
+    </div>
+
+    <div class="d-grid gap-2 col-6 mx-auto">
+        <button class="btn btn-primary my-2" onclick="getSummary1()" id="inning1" style="display: none;"
+            type="button">Show 1st Inning </button>
+    </div>
+    <div class="d-grid gap-2 col-6 mx-auto">
+        <button class="btn btn-primary my-2" onclick="hideSummary1()" id="hideInning1" style="display: none;"
+            type="button">Hide 1st Inning </button>
+    </div>
+    <div class="d-grid gap-2 col-6 mx-auto">
+        <button class="btn btn-primary my-2" onclick="getSummary2()" id="inning2" style="display: none;"
+            type="button">Show 2nd Inning </button>
+    </div>
+    <div class="d-grid gap-2 col-6 mx-auto">
+        <button class="btn btn-primary my-2" onclick="hideSummary2()" id="hideInning2" style="display: none;"
+            type="button">Hide 2nd Inning</button>
+    </div>
+    <div class="container">
+    <div class="row" id="hideTable1">
+        <div>
+            <table class="table" id="tab1">
+
+            </table>
+        </div>
+        <div>
+            <table class="table" id="tab2">
+
+            </table>
         </div>
 
 
-        <!-- Modal -->
-        <div class="modal fade text-dark" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-            aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="exampleModalLabel">Congratulations</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body" id="winnerData">
+    </div>
 
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary" onclick="newGame()">New Game</button>
-                    </div>
+    <div class="row" id="hideTable2">
+        <div>
+            <table class="table" id="tab3">
+
+            </table>
+        </div>
+        <div>
+            <table class="table" id="tab4">
+
+            </table>
+        </div>
+
+    </div>
+</div>
+    <!-- Button trigger modal -->
+    <div class="d-grid gap-2 col-6 mx-auto">
+        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" id="getWinner"
+            style="display: none;" type="button">Get Result</button>
+    </div>
+
+
+    <!-- Modal -->
+    <div class="modal fade text-dark" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Congratulations</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="winnerData">
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" onclick="newGame()">New Game</button>
                 </div>
             </div>
         </div>
-        <div id="table1"></div>
-        <div id="winnerModal"></div>
+    </div>
+    <div id="table1"></div>
+    <div id="winnerModal"></div>
 
 
 
