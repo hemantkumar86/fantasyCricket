@@ -1311,6 +1311,7 @@ for (let i = 0; i < over1; i++) {
 }
 
 var hit1 = () => {
+  bowl_played1++
   newArr = [...list1, ...list2, ...list3];
 
   newArr1 = [...listTeam1, ...listTeam2, ...listTeam3];
