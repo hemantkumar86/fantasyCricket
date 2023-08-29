@@ -1267,11 +1267,11 @@ var hit = () => {
 var disableButton = () => {
   const button = document.getElementById("hitted");
   button.disabled = true;
-  button.innerText = "Wait for 5 seconds...";
+  button.innerText = "Wait for 1 seconds...";
   setTimeout(() => {
     button.disabled = false;
     button.innerText = "Bowl";
-  }, 5000);
+  }, 1000);
 };
 
 var playSecond = () => {
@@ -1441,11 +1441,11 @@ var hit1 = () => {
 var disableButton1 = () => {
   const button = document.getElementById("hitted1");
   button.disabled = true;
-  button.innerText = "Wait for 5 seconds...";
+  button.innerText = "Wait for 1 seconds...";
   setTimeout(() => {
     button.disabled = false;
     button.innerText = "Bowl";
-  }, 5000);
+  }, 1000);
 };
 
 var getWinnerName = () => {
