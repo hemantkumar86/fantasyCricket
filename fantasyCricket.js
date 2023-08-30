@@ -1211,7 +1211,18 @@ var hit = () => {
     ind_score_bat.push(ind_score_obj1);
     
   }
-  console.log(ind_score_bat)
+
+  ind_score_obj2={bowler:listTeam2[count].name,wicket:ind_wicket,points:bowler_point1};
+
+  let index1 =  ind_score_bowl.findIndex(obj => obj.bowler === ind_score_obj2.bowler);
+  if (index1 !== -1) {
+    ind_score_bowl[index1] = ind_score_obj2;
+  } else {
+    ind_score_bowl.push(ind_score_obj2);
+    
+  }
+
+  
 
     if (playedShot != "Wicket") {
       p += ` <p class="card-text text-center">Over-[${currentOver}.${
@@ -1245,8 +1256,8 @@ var hit = () => {
     }
     currentBall++;
     if (currentBall === ball) {
-      ind_score_obj1={bowler:listTeam2[count].name,wicket:ind_wicket,points:bowler_point1};
-      ind_score_bowl.push(ind_score_obj1)
+      // ind_score_obj1={bowler:listTeam2[count].name,wicket:ind_wicket,points:bowler_point1};
+      // ind_score_bowl.push(ind_score_obj1)
       // for(let i of ind_score_bowl){
       //   console.log(i)
       // }
@@ -1399,6 +1410,21 @@ var hit1 = () => {
     ind_score_bat1.push(ind_score_obj3);
   }
 
+  ind_score_obj4={bowler:list2[count1].name,wicket:ind_wicket1,points:bowler_point2};
+
+  let index1 =   ind_score_bowl1.findIndex(obj => obj.bowler === ind_score_obj4.bowler);
+  if (index1 !== -1) {
+    ind_score_bowl1[index1] = ind_score_obj4;
+  } else {
+    ind_score_bowl1.push(ind_score_obj4);
+    
+  }
+
+
+  
+
+
+
 
     if (playedShot != "Wicket") {
       p += ` <p class="card-text text-center">Over-[${currentOver1}.${
@@ -1422,8 +1448,8 @@ var hit1 = () => {
     if (currentBall1 === ball1) {
      
     
-      ind_score_obj4={bowler:list2[count1].name,wicket:ind_wicket1,points:bowler_point2};
-      ind_score_bowl1.push(ind_score_obj4)
+      // ind_score_obj4={bowler:list2[count1].name,wicket:ind_wicket1,points:bowler_point2};
+      // ind_score_bowl1.push(ind_score_obj4)
       // for(let i of ind_score_bowl1){
       //   console.log(i)
       // }
