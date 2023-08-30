@@ -1144,7 +1144,12 @@ var hit = () => {
   document.getElementById("shots").value = playedShot;
   if (bowlerWicket == 10) {
     alert("Team All Out");
+    document.getElementById("hitted").disabled = true;
+    document.getElementById("playSecondTeam").style.display = "block";
+    document.getElementById("playTeam1").style.display = "none";
+    alert("1st inning is finished");
     return false;
+    
   }
   let p = "";
   // console.log(bowlerWicket1);
@@ -1320,6 +1325,13 @@ var hit1 = () => {
   document.getElementById("shots1").value = playedShot;
   if (bowlerWicket1 == 10) {
     alert("Team All Out");
+    document.getElementById("inning1").style.display = "block";
+    document.getElementById("inning2").style.display = "block";
+    document.getElementById("hitted1").disabled = true;
+    document.getElementById("getWinner").style.display = "block";
+
+    getWinnerName();
+    alert("2nd inning is finished");
     return false;
   }
   if (runTeam2 > runTeam1) {
