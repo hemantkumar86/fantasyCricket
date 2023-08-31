@@ -531,7 +531,7 @@ var removeToKeeping = (name, role, credit) => {
 };
 makeCaptain1 = () => {
   document.getElementById("chooseC").style.display = "block";
-  let option = "";
+  let option = ` <option value="" selected>Choose Captain...</option>`;
   gamer[0] = [];
   newArr = [...list1, ...list2, ...list3];
   gamer[0].push(newArr);
@@ -545,7 +545,7 @@ makeCaptain1 = () => {
 };
 var makeVCaptain1 = () => {
   document.getElementById("chooseVC").style.display = "block";
-  let option = "";
+  let option = ` <option value="" selected>Choose Vice Captain...</option>`;
   newArr = [...list1, ...list2, ...list3];
   for (let i of newArr) {
     option += ` 
@@ -589,7 +589,7 @@ var secondTeam = () => {
 
     return false;
   }
-  if (captainName1 == null || vCaptainName1 == null) {
+  if (captainName1 == "" || vCaptainName1 == "") {
     alert(`Please Select Captain & Vice-Captain First`);
     return false;
   }
@@ -853,7 +853,7 @@ var removeToKeeping1 = (name, role, credit) => {
 };
 makeCaptain2 = () => {
   document.getElementById("chooseC2").style.display = "block";
-  let option = "";
+  let option = ` <option value="" selected>Choose Captain...</option>`;
   gamer[1] = [];
   newArr = [...listTeam1, ...listTeam2, ...listTeam3];
   gamer[1].push(newArr);
@@ -867,7 +867,7 @@ makeCaptain2 = () => {
 };
 var makeVCaptain2 = () => {
   document.getElementById("chooseVC2").style.display = "block";
-  let option = "";
+  let option = ` <option value="" selected>Choose Vice Captain...</option>`;
   newArr = [...listTeam1, ...listTeam2, ...listTeam3];
   for (let i of newArr) {
     option += ` 
@@ -911,7 +911,7 @@ var teamPreview = () => {
     );
     return false;
   }
-  if (captainName2 == null || vCaptainName2 == null) {
+  if (captainName2 == "" || vCaptainName2 == "") {
     alert(`Please Select Captain & Vice-Captain First`);
     return false;
   }
@@ -1165,36 +1165,86 @@ var hit = () => {
     // console.log(`${listTeam2[count].name}'s Wickets: ${ind_wicket}`)
 
     document.getElementById("bowler").value = listTeam2[count].name;
-   
+
+
+
+
+
+
     if (newArr[bowlerWicket].name == captainName1) {
-      //console.log(captainName1);
       total1 = total1 + point1 * 2;
-      total2 = total2 + point2;
-      batsman_point1+=point1*2;
-      bowler_point1+=point2;
-      // console.log(total1);
-      document.getElementById("pointTeam1").value = total1;
+     
+      batsman_point1 =  batsman_point1 + point1 * 2;
+      
+      document.getElementById("pointTeam1").value= total1;
+     
 
-      document.getElementById("pointTeam2").value = total2;
-    } else if (newArr[bowlerWicket].name == vCaptainName1) {
+  } else if (newArr[bowlerWicket].name == vCaptainName1) {
       total1 = total1 + point1 * 1.5;
-      total2 = total2 + point2;
-      batsman_point1+=point1*1.5;
-      bowler_point1+=point2;
-      // console.log(total1);
+      
+      batsman_point1 =   batsman_point1 + point1 * 1.5;
+     
       document.getElementById("pointTeam1").value = total1;
-
-      document.getElementById("pointTeam2").value = total2;
-    } else {
+  } else {
       total1 = total1 + point1;
-      total2 = total2 + point2;
-      batsman_point1+=point1;
-      bowler_point1+=point2;
-      // console.log(total1);
+     
+      batsman_point1 =  batsman_point1 + point1;
+      
       document.getElementById("pointTeam1").value = total1;
+  }
 
+  if (listTeam2[count].name== captainName2) {
+      total2 = total2 + point2 * 2;
+      bowler_point1 =   bowler_point1 + point2 * 2;
+    
       document.getElementById("pointTeam2").value = total2;
-    }
+  } else if (listTeam2[count].name == vCaptainName2) {
+     
+      total2 = total2 + point2 * 1.5;
+      bowler_point1 =   bowler_point1 + point2 * 1.5;
+      
+      document.getElementById("pointTeam2").value = total2;
+  } else {
+      total2 = total2 + point2;
+      bowler_point1 =   bowler_point1 + point2;
+      
+      document.getElementById("pointTeam2").value= total2;
+  }
+
+
+
+
+
+   
+    // if (newArr[bowlerWicket].name == captainName1) {
+    //   //console.log(captainName1);
+    //   total1 = total1 + point1 * 2;
+    //   total2 = total2 + point2;
+    //   batsman_point1+=point1*2;
+    //   bowler_point1+=point2;
+    //   // console.log(total1);
+    //   document.getElementById("pointTeam1").value = total1;
+
+    //   document.getElementById("pointTeam2").value = total2;
+    // } else if (newArr[bowlerWicket].name == vCaptainName1) {
+    //   total1 = total1 + point1 * 1.5;
+    //   total2 = total2 + point2;
+    //   batsman_point1+=point1*1.5;
+    //   bowler_point1+=point2;
+    //   // console.log(total1);
+    //   document.getElementById("pointTeam1").value = total1;
+
+    //   document.getElementById("pointTeam2").value = total2;
+    // } else {
+    //   total1 = total1 + point1;
+    //   total2 = total2 + point2;
+    //   batsman_point1+=point1;
+    //   bowler_point1+=point2;
+    //   // console.log(total1);
+    //   document.getElementById("pointTeam1").value = total1;
+
+    //   document.getElementById("pointTeam2").value = total2;
+    // }
     let ind_score_obj1 = {
       playerName: `${newArr[bowlerWicket].name}`,
       four: fourCount,
@@ -1366,35 +1416,81 @@ var hit1 = () => {
     myOver1[currentOver1][currentBall1] = playedShot;
     document.getElementById("bowler1").value = list2[count1].name;
 
+
+
+
+
     if (newArr1[bowlerWicket1].name == captainName2) {
-      console.log(captainName2);
-      total2 = total2 + point3 * 2;
-      total1 = total1 + point4;
-      batsman_point2+=point3*2;
-      bowler_point2+=point4;
-      // console.log(total1);
-      document.getElementById("playPointTeam1").value = total1;
+      total1 = total1 + point3 * 2;
+     
+      batsman_point2 =  batsman_point2 + point3 * 2;
+      
+      document.getElementById("playPointTeam1").value= total1;
+     
 
-      document.getElementById("playPointTeam2").value = total2;
-    } else if (newArr1[bowlerWicket].name == vCaptainName2) {
-      total2 = total2 + point3 * 1.5;
-      total1 = total1 + point4;
-      batsman_point2+=point3*1.5;
-      bowler_point2+=point4;
-      // console.log(total1);
+  } else if (newArr[bowlerWicket].name == vCaptainName2) {
+      total1 = total1 + point3 * 1.5;
+      
+      batsman_point2 =   batsman_point2 + point3 * 1.5;
+     
       document.getElementById("playPointTeam1").value = total1;
-
-      document.getElementById("playPointTeam2").value = total2;
-    } else {
-      total2 = total2 + point3;
-      total1 = total1 + point4;
-      batsman_point2+=point3;
-      bowler_point2+=point4;
-      // console.log(total1);
+  } else {
+      total1 = total1 + point3;
+     
+      batsman_point2 =  batsman_point2 + point3;
+      
       document.getElementById("playPointTeam1").value = total1;
+  }
 
+  if (list2[count1].name== captainName1) {
+      total2 = total2 + point4 * 2;
+      bowler_point2 =  bowler_point2 + point4 * 2;
+    
       document.getElementById("playPointTeam2").value = total2;
-    }
+  } else if (list2[count1].name == vCaptainName1) {
+     
+      total2 = total2 + point4 * 1.5;
+      bowler_point2 =  bowler_point2 + point4 * 1.5;
+      
+      document.getElementById("playPointTeam2").value = total2;
+  } else {
+      total2 = total2 + point4;
+      bowler_point2 =  bowler_point2 + point4;
+      
+      document.getElementById("playPointTeam2").value= total2;
+  }
+
+
+
+    // if (newArr1[bowlerWicket1].name == captainName2) {
+    //   console.log(captainName2);
+    //   total2 = total2 + point3 * 2;
+    //   total1 = total1 + point4;
+    //   batsman_point2+=point3*2;
+    //   bowler_point2+=point4;
+    //   // console.log(total1);
+    //   document.getElementById("playPointTeam1").value = total1;
+
+    //   document.getElementById("playPointTeam2").value = total2;
+    // } else if (newArr1[bowlerWicket].name == vCaptainName2) {
+    //   total2 = total2 + point3 * 1.5;
+    //   total1 = total1 + point4;
+    //   batsman_point2+=point3*1.5;
+    //   bowler_point2+=point4;
+    //   // console.log(total1);
+    //   document.getElementById("playPointTeam1").value = total1;
+
+    //   document.getElementById("playPointTeam2").value = total2;
+    // } else {
+    //   total2 = total2 + point3;
+    //   total1 = total1 + point4;
+    //   batsman_point2+=point3;
+    //   bowler_point2+=point4;
+    //   // console.log(total1);
+    //   document.getElementById("playPointTeam1").value = total1;
+
+    //   document.getElementById("playPointTeam2").value = total2;
+    // }
     let ind_score_obj3 = {
       playerName: `${newArr1[bowlerWicket1].name}`,
       four: fourCount1,
