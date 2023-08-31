@@ -589,7 +589,7 @@ var secondTeam = () => {
 
     return false;
   }
-  if (captainName1 == "" || vCaptainName1 == "") {
+  if (captainName1 == "" || vCaptainName1 == "" ||captainName1==null ||vCaptainName1==null) {
     alert(`Please Select Captain & Vice-Captain First`);
     return false;
   }
@@ -911,7 +911,7 @@ var teamPreview = () => {
     );
     return false;
   }
-  if (captainName2 == "" || vCaptainName2 == "") {
+  if (captainName2 == "" || vCaptainName2 == ""|| captainName2==null ||vCaptainName2==null) {
     alert(`Please Select Captain & Vice-Captain First`);
     return false;
   }
