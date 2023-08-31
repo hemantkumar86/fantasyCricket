@@ -630,6 +630,7 @@ var bat1 = () => {
   document.getElementById("card1").innerHTML = card;
   document.getElementById("chooseC2").style.display="none"
   document.getElementById("chooseVC2").style.display="none"
+  document.getElementById("teamPre").style.display = "none";
 };
 
 var bowl1 = () => {
@@ -655,6 +656,7 @@ var bowl1 = () => {
   document.getElementById("card1").innerHTML = card;
   document.getElementById("chooseC2").style.display="none"
   document.getElementById("chooseVC2").style.display="none"
+  document.getElementById("teamPre").style.display = "none";
 };
 
 var keeping1 = () => {
@@ -680,6 +682,7 @@ var keeping1 = () => {
   document.getElementById("card1").innerHTML = card;
   document.getElementById("chooseC2").style.display="none"
   document.getElementById("chooseVC2").style.display="none"
+  document.getElementById("teamPre").style.display = "none";
 };
 
 var addToBat1 = (name, role, credit) => {
