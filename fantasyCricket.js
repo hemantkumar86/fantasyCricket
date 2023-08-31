@@ -313,6 +313,8 @@ var bat = () => {
     }
   }
   document.getElementById("card").innerHTML = card;
+  document.getElementById("chooseC").style.display="none"
+  document.getElementById("chooseVC").style.display="none"
 };
 var bowl = () => {
   var card = "";
@@ -331,6 +333,8 @@ var bowl = () => {
     }
   }
   document.getElementById("card").innerHTML = card;
+  document.getElementById("chooseC").style.display="none"
+  document.getElementById("chooseVC").style.display="none"
 };
 var keeping = () => {
   var card = "";
@@ -350,6 +354,8 @@ var keeping = () => {
     }
   }
   document.getElementById("card").innerHTML = card;
+  document.getElementById("chooseC").style.display="none"
+  document.getElementById("chooseVC").style.display="none"
 };
 
 var addToBat = (name, role, credit) => {
@@ -622,6 +628,8 @@ var bat1 = () => {
     }
   }
   document.getElementById("card1").innerHTML = card;
+  document.getElementById("chooseC2").style.display="none"
+  document.getElementById("chooseVC2").style.display="none"
 };
 
 var bowl1 = () => {
@@ -645,6 +653,8 @@ var bowl1 = () => {
     }
   }
   document.getElementById("card1").innerHTML = card;
+  document.getElementById("chooseC2").style.display="none"
+  document.getElementById("chooseVC2").style.display="none"
 };
 
 var keeping1 = () => {
@@ -668,6 +678,8 @@ var keeping1 = () => {
     }
   }
   document.getElementById("card1").innerHTML = card;
+  document.getElementById("chooseC2").style.display="none"
+  document.getElementById("chooseVC2").style.display="none"
 };
 
 var addToBat1 = (name, role, credit) => {
