@@ -272,7 +272,7 @@ var gamingTeam = [];
 var toss = () => {
   if (player1 == "" || player2 == "") {
     alert("Please enter the names of both teams");
-    return false;
+    location.reload()
   }
   randomNumber = Math.floor(Math.random() * 2) + 1;
   if (randomNumber == 1) {
