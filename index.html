@@ -261,6 +261,22 @@
         <button class="btn btn-primary my-2" onclick="hideSummary1()" id="hideInning1" style="display: none;"
             type="button">Hide 1st Inning </button>
     </div>
+    <div class="container">
+        <div class="row" id="hideTable1">
+            <div>
+                <table class="table" id="tab1">
+
+                </table>
+            </div>
+            <div>
+                <table class="table" id="tab2">
+
+                </table>
+            </div>
+
+
+        </div>
+    </div>
     <div class="d-grid gap-2 col-6 mx-auto">
         <button class="btn btn-primary my-2" onclick="getSummary2()" id="inning2" style="display: none;"
             type="button">Show 2nd Inning </button>
@@ -270,35 +286,20 @@
             type="button">Hide 2nd Inning</button>
     </div>
     <div class="container">
-    <div class="row" id="hideTable1">
-        <div>
-            <table class="table" id="tab1">
+        <div class="row" id="hideTable2">
+            <div>
+                <table class="table" id="tab3">
 
-            </table>
+                </table>
+            </div>
+            <div>
+                <table class="table" id="tab4">
+
+                </table>
+            </div>
+
         </div>
-        <div>
-            <table class="table" id="tab2">
-
-            </table>
-        </div>
-
-
     </div>
-
-    <div class="row" id="hideTable2">
-        <div>
-            <table class="table" id="tab3">
-
-            </table>
-        </div>
-        <div>
-            <table class="table" id="tab4">
-
-            </table>
-        </div>
-
-    </div>
-</div>
     <!-- Button trigger modal -->
     <div class="d-grid gap-2 col-6 mx-auto">
         <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" id="getWinner"
