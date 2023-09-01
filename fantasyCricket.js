@@ -305,9 +305,9 @@ var bat = () => {
 <h5 class="card-title">Name: ${i.name}</h5>
 <p class="card-text">Role: ${i.playingRole}</p>
 <p class="card-text">Credit: ${i.credit}</p>
-<button class="btn btn-outline-primary"  onclick="addToBat('${i.name}','${i.playingRole}',${i.credit})">Select</button>
+<button class="btn btn-primary"  onclick="addToBat('${i.name}','${i.playingRole}',${i.credit})">Select</button>
  
-<button class="btn btn-outline-danger"  onclick="removeToBat('${i.name}','${i.playingRole}',${i.credit})">Remove</button>
+<button class="btn btn-danger"  onclick="removeToBat('${i.name}','${i.playingRole}',${i.credit})">Remove</button>
 </div>
 </div>`;
     }
@@ -326,8 +326,8 @@ var bowl = () => {
 <h5 class="card-title">Name: ${i.name}</h5>
 <p class="card-text">Role: ${i.playingRole}</p>
 <p class="card-text">Credit: ${i.credit}</p>
-<button class="btn btn-outline-primary bowl"  onclick="addToBowl('${i.name}','${i.playingRole}',${i.credit})">Select</button>
-<button class="btn btn-outline-danger"  onclick="removeToBowl('${i.name}','${i.playingRole}',${i.credit})">Remove</button>
+<button class="btn btn-primary bowl"  onclick="addToBowl('${i.name}','${i.playingRole}',${i.credit})">Select</button>
+<button class="btn btn-danger"  onclick="removeToBowl('${i.name}','${i.playingRole}',${i.credit})">Remove</button>
 </div>
 </div>`;
     }
@@ -346,9 +346,9 @@ var keeping = () => {
 <h5 class="card-title">Name: ${i.name}</h5>
 <p class="card-text">Role: ${i.playingRole}</p>
 <p class="card-text">Credit: ${i.credit}</p>
-<button class="btn btn-outline-primary keeping"  onclick="addToKeeping('${i.name}','${i.playingRole}',${i.credit})">Select</button>
+<button class="btn btn-primary keeping"  onclick="addToKeeping('${i.name}','${i.playingRole}',${i.credit})">Select</button>
  
-<button class="btn btn-outline-danger"  onclick="removeToKeeping('${i.name}','${i.playingRole}',${i.credit})">Remove</button>
+<button class="btn btn-danger"  onclick="removeToKeeping('${i.name}','${i.playingRole}',${i.credit})">Remove</button>
 </div>
 </div>`;
     }
@@ -620,9 +620,9 @@ var bat1 = () => {
 <h5 class="card-title">Name: ${i.name}</h5>
 <p class="card-text">Role: ${i.playingRole}</p>
 <p class="card-text">Credit: ${i.credit}</p>
-<button class="btn btn-outline-primary"  onclick="addToBat1('${i.name}','${i.playingRole}',${i.credit})">Select</button>
+<button class="btn btn-primary"  onclick="addToBat1('${i.name}','${i.playingRole}',${i.credit})">Select</button>
 
-<button class="btn btn-outline-danger"  onclick="removeToBat1('${i.name}','${i.playingRole}',${i.credit})">Remove</button>
+<button class="btn btn-danger"  onclick="removeToBat1('${i.name}','${i.playingRole}',${i.credit})">Remove</button>
 </div>
 </div>`;
     }
@@ -647,8 +647,8 @@ var bowl1 = () => {
 <h5 class="card-title">Name: ${i.name}</h5>
 <p class="card-text">Role: ${i.playingRole}</p>
 <p class="card-text">Credit: ${i.credit}</p>
-<button class="btn btn-outline-primary bowl"  onclick="addToBowl1('${i.name}','${i.playingRole}',${i.credit})">Select</button>
-<button class="btn btn-outline-danger"  onclick="removeToBowl1('${i.name}','${i.playingRole}',${i.credit})">Remove</button>
+<button class="btn btn-primary bowl"  onclick="addToBowl1('${i.name}','${i.playingRole}',${i.credit})">Select</button>
+<button class="btn btn-danger"  onclick="removeToBowl1('${i.name}','${i.playingRole}',${i.credit})">Remove</button>
 </div>
 </div>`;
     }
@@ -673,8 +673,8 @@ var keeping1 = () => {
 <h5 class="card-title">Name: ${i.name}</h5>
 <p class="card-text">Role: ${i.playingRole}</p>
 <p class="card-text">Credit: ${i.credit}</p>
-<button class="btn btn-outline-primary bowl"  onclick="addToKeeping1('${i.name}','${i.playingRole}',${i.credit})">Select</button>
-<button class="btn btn-outline-danger"  onclick="removeToKeeping1('${i.name}','${i.playingRole}',${i.credit})">Remove</button>
+<button class="btn btn-primary bowl"  onclick="addToKeeping1('${i.name}','${i.playingRole}',${i.credit})">Select</button>
+<button class="btn btn-danger"  onclick="removeToKeeping1('${i.name}','${i.playingRole}',${i.credit})">Remove</button>
 </div>
 </div>`;
     }
