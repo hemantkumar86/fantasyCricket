@@ -1602,12 +1602,12 @@ var disableButton1 = () => {
 
 var getWinnerName = () => {
   if (total1 > total2) {
-    console.log(gamingTeam[0].toUpperCase());
+    // console.log(gamingTeam[0].toUpperCase());
     document.getElementById(
       "winnerData"
     ).innerHTML = `${gamingTeam[0].toUpperCase()} Wins`;
   } else {
-    console.log(gamingTeam[1].toUpperCase());
+    // console.log(gamingTeam[1].toUpperCase());
     document.getElementById(
       "winnerData"
     ).innerHTML = `${gamingTeam[1].toUpperCase()} Wins`;
