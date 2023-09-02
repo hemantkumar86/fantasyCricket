@@ -346,7 +346,7 @@ var keeping = () => {
 <h5 class="card-title">Name: ${i.name}</h5>
 <p class="card-text">Role: ${i.playingRole}</p>
 <p class="card-text">Credit: ${i.credit}</p>
-<button class="btn btn-primary keeping"  onclick="addToKeeping('${i.name}','${i.playingRole}',${i.credit})">Select</button>
+<button class="btn btn-primary keeping"   onclick="addToKeeping('${i.name}','${i.playingRole}',${i.credit})">Select</button>
  
 <button class="btn btn-danger"  onclick="removeToKeeping('${i.name}','${i.playingRole}',${i.credit})">Remove</button>
 </div>
@@ -402,7 +402,9 @@ var addToBowl = (name, role, credit) => {
     creditData();
   }
 };
+
 var addToKeeping = (name, role, credit) => {
+  
   obj = { name: name, role: role, credit: credit };
   if (list3.length + 1 > 1) {
     alert("You can only select maximum one player");
@@ -866,7 +868,7 @@ var removeToKeeping1 = (name, role, credit) => {
     creditData1();
   }
 };
-makeCaptain2 = () => {
+var   makeCaptain2 = () => {
   document.getElementById("chooseC2").style.display = "block";
   let option = ` <option value="" selected>Choose Captain...</option>`;
   gamer[1] = [];
@@ -1777,4 +1779,21 @@ var hideSummary2=()=>{
   document.getElementById("inning2").style.display="block"
   document.getElementById("hideInning2").style.display="none";
   document.getElementById("hideTable2").style.display="none"
+}
+
+var darkMode=()=>{
+  if(document.body.classList.contains("bg-dark")){
+    document.body.classList.remove('bg-dark');
+    document.body.classList.remove('text-light');
+    
+    document.body.classList.add('bg-light');
+    document.body.classList.add('text-dark');
+  }
+  else if(document.body.classList.contains("bg-light")){
+    document.body.classList.remove('bg-light');
+    document.body.classList.remove('text-dark');
+    
+    document.body.classList.add('bg-dark');
+    document.body.classList.add('text-light');
+  }
 }
