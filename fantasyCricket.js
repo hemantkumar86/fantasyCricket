@@ -270,6 +270,10 @@ var grandTotal1;
 var randomNumber;
 var gamingTeam = [];
 var toss = () => {
+  if(player1==player2){
+    alert("Team names can't be same")
+    location.reload()
+  }
   if (player1 == "" || player2 == "") {
     alert("Please enter the names of both teams");
     location.reload()
