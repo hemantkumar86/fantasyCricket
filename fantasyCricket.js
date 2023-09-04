@@ -1071,7 +1071,7 @@ var shotType = () => {
       break;
     case 7:
       shot = "Wicket";
-      point1 = -2;
+      point1 = 0;
       point2 = 10;
       wicketCount1 += 1;
       ind_wicket += 1;
@@ -1129,7 +1129,7 @@ var shotType1 = () => {
       break;
     case 7:
       shot1 = "Wicket";
-      point3 = -2;
+    point3=0
       point4 = 10;
       wicketCount2 += 1;
       ind_wicket1 += 1;
@@ -1183,9 +1183,25 @@ var hit = () => {
 
     document.getElementById("bowler").value = listTeam2[count].name;
 
+if( myOver[currentOver][currentBall]=="Wicket" && newArr[bowlerWicket].name == captainName1 && ind_run==0){
+  point1=-2
+  total1=total1+point1*2;
+  batsman_point1=0
+  document.getElementById("pointTeam1").value= total1;
 
-
-
+}
+else if( myOver[currentOver][currentBall]=="Wicket" && newArr[bowlerWicket].name == vCaptainName1 && ind_run==0){
+  point1=-2
+  total1=total1+point1*1.5;
+  batsman_point1=0
+  document.getElementById("pointTeam1").value= total1;
+}
+else if( myOver[currentOver][currentBall]=="Wicket" && ind_run==0){
+  point1=-2
+  total1=total1+point1;
+  batsman_point1=0
+  document.getElementById("pointTeam1").value= total1;
+}
 
 
     if (newArr[bowlerWicket].name == captainName1) {
@@ -1227,6 +1243,9 @@ var hit = () => {
       
       document.getElementById("pointTeam2").value= total2;
   }
+
+ 
+   
 
 
 
@@ -1435,47 +1454,70 @@ var hit1 = () => {
 
 
 
+    if(  myOver1[currentOver1][currentBall1]=="Wicket" && newArr[bowlerWicket].name == captainName2 && ind_run1==0){
+      point3=-2
+      total2=total2+point3*2;
+      batsman_point2=0
+      document.getElementById("playPointTeam2").value= total2;
+    
+    }
+    else if(  myOver1[currentOver1][currentBall1]=="Wicket" && newArr[bowlerWicket].name == vCaptainName2 && ind_run1==0){
+      point3=-2
+      total2=total2+point3*1.5;
+      batsman_point2=0
+      document.getElementById("playPointTeam2").value= total2;
+    }
+    else if(  myOver1[currentOver1][currentBall1]=="Wicket" && ind_run1==0){
+      point3=-2
+      total2=total2+point3;
+      batsman_point2=0
+      document.getElementById("playPointTeam2").value= total2;
+    }
+   
 
 
     if (newArr1[bowlerWicket1].name == captainName2) {
-      total1 = total1 + point3 * 2;
+      total2 = total2 + point3 * 2;
      
       batsman_point2 =  batsman_point2 + point3 * 2;
       
-      document.getElementById("playPointTeam1").value= total1;
+      document.getElementById("playPointTeam2").value= total2;
      
 
-  } else if (newArr[bowlerWicket].name == vCaptainName2) {
-      total1 = total1 + point3 * 1.5;
+  } else if (newArr1[bowlerWicket1].name == vCaptainName2) {
+      total2 = total2 + point3 * 1.5;
       
       batsman_point2 =   batsman_point2 + point3 * 1.5;
      
-      document.getElementById("playPointTeam1").value = total1;
+      document.getElementById("playPointTeam2").value = total2;
   } else {
-      total1 = total1 + point3;
+      total2 = total2 + point3;
      
       batsman_point2 =  batsman_point2 + point3;
       
-      document.getElementById("playPointTeam1").value = total1;
+      document.getElementById("playPointTeam2").value = total2;
   }
 
   if (list2[count1].name== captainName1) {
-      total2 = total2 + point4 * 2;
-      bowler_point2 =  bowler_point2 + point4 * 2;
+      total1 = total1 + point4 * 2;
+      bowler_point1 =  bowler_point1 + point4 * 2;
     
-      document.getElementById("playPointTeam2").value = total2;
+      document.getElementById("playPointTeam1").value = total1;
   } else if (list2[count1].name == vCaptainName1) {
      
-      total2 = total2 + point4 * 1.5;
-      bowler_point2 =  bowler_point2 + point4 * 1.5;
+      total1 = total1 + point4 * 1.5;
+      bowler_point1 =  bowler_point1 + point4 * 1.5;
       
-      document.getElementById("playPointTeam2").value = total2;
+      document.getElementById("playPointTeam1").value = total1;
   } else {
-      total2 = total2 + point4;
-      bowler_point2 =  bowler_point2 + point4;
+      total1 = total1 + point4;
+      bowler_point1 =  bowler_point1 + point4;
       
-      document.getElementById("playPointTeam2").value= total2;
+      document.getElementById("playPointTeam1").value= total1;
   }
+  
+  
+  
 
 
 
