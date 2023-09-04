@@ -592,7 +592,7 @@ var secondTeam = () => {
     alert("Maximum Credit is 100. Please recreate your team");
     return false;
   }
-  if (list1.length + list2.length + list3.length != 11) {
+  if (list1.length + list2.length + list3.length !== 11) {
     alert(
       `11 Players must be selected (${
         11 - (list1.length + list2.length + list3.length)
@@ -924,7 +924,7 @@ var teamPreview = () => {
     alert("Maximum Credit is 100. Please recreate your team");
     return false;
   }
-  if (listTeam1.length + listTeam2.length + listTeam3.length != 11) {
+  if (listTeam1.length + listTeam2.length + listTeam3.length !== 11) {
     alert(
       `11 Players must be selected (${
         11 - (listTeam1.length + listTeam2.length + listTeam3.length)
